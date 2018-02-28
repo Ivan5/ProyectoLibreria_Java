@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 /**
  *
- * @author conve
+ * @author Ivan JAramillo
  */
 public class Libro {
     private String isbn;
