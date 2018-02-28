@@ -5,6 +5,8 @@
  */
 package lalibreria;
 
+import java.io.PrintWriter;
+
 /**
  *
  * @author conve
@@ -60,6 +62,8 @@ public class Libro {
     public void imprime(){
         System.out.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+this.precio);
     }
-    
+    public void imprime(PrintWriter salida){
+        salida.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+this.precio);
+    }
     
 }
