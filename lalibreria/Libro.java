@@ -6,12 +6,14 @@
 package lalibreria;
 
 import java.io.PrintWriter;
+import java.io.Serializable;
+import java.text.DecimalFormat;
 
 /**
  *
  * @author Ivan JAramillo
  */
-public class Libro {
+public class Libro implements Serializable{
     private String isbn;
     private String titulo;
     private String autor;
@@ -60,10 +62,13 @@ public class Libro {
     }
     
     public void imprime(){
-        System.out.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+this.precio);
+        DecimalFormat decimales = new DecimalFormat("00.00");
+        System.out.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+decimales.format(this.precio));
     }
     public void imprime(PrintWriter salida){
-        salida.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+this.precio);
+                DecimalFormat decimales = new DecimalFormat("00.00");
+
+        salida.println("ISB: "+this.isbn+" Titulo: "+this.titulo+" Autor: "+this.autor+" Precio: "+decimales.format(this.precio));
     }
     
 }
